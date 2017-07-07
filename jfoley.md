@@ -26,3 +26,10 @@ Which means that we can tabulate the different speakers!
     source /course/bin/setup
     grep "SPEAKER" /course/data/shakespeare-xml/hamlet*.xml | sort | uniq -c
 
+The first line adds a bunch of "utility" scripts that I wrote in python to our path. You can see them all here:
+
+    ls /course/bin/
+
+With these scripts, we can do some things like analyzing the words that co-occur near a particular word:
+
+    grep -ihw blood /course/data/shakespeare-xml/*.xml | 
