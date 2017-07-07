@@ -2,6 +2,7 @@
 
 Turns out there's XML in these files.
 
+```xml
     <SPEECH>
     <SPEAKER>HAMLET</SPEAKER>
     <LINE>Let me see.</LINE>
@@ -20,16 +21,24 @@ Turns out there's XML in these files.
     <LINE>come; make her laugh at that. Prithee, Horatio, tell</LINE>
     <LINE>me one thing.</LINE>
     </SPEECH>
+```
 
 Which means that we can tabulate the different speakers!
 
+```bash
     source /course/bin/setup
     grep "SPEAKER" /course/data/shakespeare-xml/hamlet*.xml | sort | uniq -c
+```
 
 The first line adds a bunch of "utility" scripts that I wrote in python to our path. You can see them all here:
 
+```bash
     ls /course/bin/
+```
 
 With these scripts, we can do some things like analyzing the words that co-occur near a particular word:
 
+```bash
     grep -ihw blood /course/data/shakespeare-xml/*.xml | 
+```
+
