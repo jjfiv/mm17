@@ -1,4 +1,6 @@
 #!/bin/bash
 
-seq 1 15
+for x in $(seq 1 7); do
+  echo $x
+done
 
